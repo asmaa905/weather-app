@@ -1,0 +1,275 @@
+/* start global vars */
+/* start global rulez */
+:root {
+  --secondary-text-color :rgb(191, 193, 200)  ;
+  --global-text-color: #fff;
+   --main-color : rgb(38, 41, 54)
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+  direction: ltr;
+  font-family: Roboto, "Open Sans", sans-serif;
+  color: var(--global-text-color);
+}
+.container {
+  width: 95%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bg-dark {
+    background-color: rgb(30, 32, 43);
+}
+.bg-blue {
+    background-color: #009ad8;
+
+}
+.bg-petrol {
+    background-color: rgb(34 ,37, 48) !important;
+
+}
+.bg-light-petrol {
+    background-color: rgb(38 ,41, 54) !important;
+
+}
+.bg-light-petrol-200 {
+    background-color: rgb(50, 53, 68);
+}
+.text-blue {
+    color: #009ad8;
+
+}
+a {
+    text-decoration: none;
+    color:aliceblue
+}
+/* end global vars */
+
+li.nav-item {
+    margin-left: 10px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+.navbar-expand-lg .navbar-nav  a.nav-link {
+     list-style: none;
+     cursor: pointer;
+     font-size: 14px;
+     line-height: 21px;
+     color: rgb(255, 255, 255);
+     font-weight: 400;
+
+     /* padding: 5px 16px; */
+     border: 2px solid transparent;
+     border-radius: 30px;
+     -webkit-transition: 0.3s ease;
+     transition: 0.3s ease;
+}
+.nav-item  a.nav-link:hover, .nav-item  a.nav-link.active {
+    border: 1px solid rgb(0, 154, 216) ;
+    color: rgb(0, 154, 216)    ;
+    
+
+}
+.logo-text {
+    padding-left: 12px;
+}
+.navbar {
+    /* background-color: rgb(30, 32, 43); */
+    color:  white;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+div h1 {
+    font-size: 16px;
+    line-height: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+div small {
+ font-size: 10px;
+ line-height: 15px;
+ color: rgb(191, 193, 200);
+ font-weight: 300;
+}
+/* end navbar */
+/* start find location section */
+.find-location-section  {
+    background-image: url(../images/banner.png);
+    background-position: 0 20%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block: 70px;
+    min-height: 350px;
+}
+
+.find-location-section .find-form .btn-find {
+    
+    top: 1px;
+    right: 1px;
+    bottom: 3px;
+    padding: 0 40px;
+    border: none;
+    border-radius: 30px;
+}
+.find-location-section .find-form .input-find {
+   border: none;
+   outline: none;
+
+   padding: 20px 50px 20px 20px;
+    color: var(--global-text-color);
+    border-radius: 30px;
+}
+.find-form input.form-control:focus, .subscribe-form input.form-control:focus {
+    box-shadow: none;
+}
+/* end find location section */
+/* start weather desc section */
+
+section.weather-desc p{
+   color: rgb(191, 193, 200);
+   font-weight: 300;
+   font-size: 18px;
+   line-height: 26px;
+   
+}
+section.weather-desc p span {
+    color: rgb(248, 249, 250)    ;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+/* end weather desc section  */
+/* start floating sectiom */
+.floating-section{
+    z-index: 99999;
+    margin-top: -150px;
+    margin-bottom: 50px;
+}
+.floating-section .weather-container {
+    width: 100%;
+    background: #323544;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+.floating-section .cardd .card-head {
+     background-color: rgb(45, 48, 61);
+     padding: 10px;
+
+}
+.floating-section .cardd .card-head .day,.floating-section .cardd .card-head .date{
+    color: rgb(191, 193, 200);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+.floating-section .cardd .card-content {
+    
+    padding: 30px 20px;
+}
+.floating-section .cardd .card-content .location {
+    color: rgb(191, 193, 200)    ;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+}
+.floating-section .cardd .card-content .degree {
+    color: rgb(255, 255, 255);
+    font-size: 90px ;
+    line-height: 135px;
+    font-weight: 700;
+}
+.floating-section .cardd .card-content .custom-degree {
+    color: rgb(255, 255, 255);
+    font-size: 24px ;
+    line-height: 36px;
+    font-weight: 700;
+}
+.floating-section .cardd .card-content .average-degree {
+    color: rgb(191, 193, 200);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+}
+.floating-section .cardd .card-content .degree-desc {
+    color: rgb(0, 154, 216);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 300;
+}
+.floating-section .cardd .card-content .weather-details span {
+    color: rgb(191, 193, 200)
+    ;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 300;
+}
+/* start footer */
+.footer{
+    padding: 50px 0px;
+    background-color: rgb(38, 41, 54);
+}
+.footer .subscribe-section {
+    position: relative;
+}
+.footer .subscribe-section input {
+    border: none;
+    outline: none;
+}
+.footer .subscribe-section button.submit-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 0 40px;
+    border: none;
+    border-radius: 30px;
+    
+}
+button, form button.submit-btn, form input[type="button"], form button, form input[type="reset"] {
+    border: none;
+    background: #009ad8;
+    color: var( --global-text-color);
+}
+.footer .social-menu {
+    text-align: end;
+    padding-right: 45px;
+}
+.footer .social-menu .icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 2;
+    transition: 0.3s ease;
+    font-size: 20px;
+}
+.footer .social-menu .icon:hover{
+   background-color: #009ad8 !important;
+   color:#fff;
+    
+}
+.footer .copyright {
+    color:rgb(191, 193, 200);
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 300;
+}

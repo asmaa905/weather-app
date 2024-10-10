@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weather App</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/all.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.min.css'>
+    <link rel="icon" href="./images/favico.png">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+</head>
+<body >
+    <div class="content">
+        <nav class="navbar navbar-expand-lg py-50 bg-dark">
+            <div class="container d-flex">
+              <a class="navbar-brand logo col-md-1 d-flex  justify-content-between text-left" href="#">   
+                <img src="./images/logo.png" alt="" class="logo" width="64" height="38">
+                <div class="logo-text">
+                    <h1 class="site-title m-0">Weather</h1>
+                    <small class="site-description">tagline goes here</small>
+                </div>
+              </a>
+              <!-- collapase -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse ms-auto" style="padding-left: 577px !important;justify-self: end;" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Live cameras</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " >Photos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " >Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        <div class="main">
+          <section class="find-location-section position-relative">
+            <div class=" container">
+                <form class="find-form position-relative">
+                    <input id="findInput" class="form-control input-find bg-dark w-100 p-3  rounded-pill " type="text" placeholder="Find your location...">
+                    <button id="btnFind" class=" btn-find position-absolute   text-white " type="button">Find</button>
+                </form>
+            </div>
+        </section>
+        <section class="floating-section position-absolute w-100  content-floating  d-flex flex-column justify-content-start align-items-center   w-100">
+          <div class="container ">
+            <div class="row weather-container">
+              <div class=" cardd col-md-4  p-0 bg-light-petrol-200" id="day1">
+              </div>
+              <div class=" cardd col-md-4  p-0 text-center  bg-light-petrol" id="day2">
+              </div>
+              <div class=" cardd col-md-4  p-0 text-center bg-light-petrol-200" id="day3">
+              </div>
+            </div>
+
+          </div>
+        </section>
+          <section class="weather-desc  bg-dark  pt-5 py-lg-5 w-100 d-flex justify-content-center align-items-center">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <p class="text-center text-lg-start fs-5 ">Exploring the vibrant world of weather, our platform.
+                            <br>
+                            <span class="px-1 fw-bold ">Weather</span> is a comprehensive destination for the
+                            latest updates and forecasts.<br>
+                            Whether seeking current news, live camera feeds, captivating photos, or direct contact for
+                            queries, Weather offers an immersive experience.<br>
+                            The site's intuitive interface allows users to effortlessly find their locations and
+                            access detailed forecasts.<br> Our commitment to providing timely, accurate weather information
+                            is
+                            matched by our dedication to user experience. <br>
+                            <span class="fs-6 fw-semibold text-light">- Join us in navigating the atmospheric world andstay
+                                informed with Weather!</span>
+                    </p></div>
+                    <div class="col-lg-5 mb-0">
+                        <svg class="weather-svg mx-auto d-block" xmlns="http://www.w3.org/2000/svg" height="270" fill="none">
+                            <circle class="sun" cx="188" cy="123" r="106" fill="#FFD43B"></circle>
+                            <path class="moon" opacity=".3" d="M165 206c58.542 0 106-47.458 106-106 0-23.403-7.585-45.035-20.429-62.571C276.901 56.715 294 87.861 294 123c0 58.542-47.458 106-106 106-35.139 0-66.285-17.098-85.571-43.429C119.965 198.416 141.597 206 165 206z" fill="#FAB005"></path>
+                            <path class="rocket-bottom" d="M175.828 113.828a3.997 3.997 0 0 0 0-5.656 3.997 3.997 0 0 0-5.656 0l-35 35a3.997 3.997 0 0 0 0 5.656 3.997 3.997 0 0 0 5.656 0l35-35zM192.328 113.172a3.997 3.997 0 0 1 0 5.656l-107.5 107.5a3.998 3.998 0 0 1-5.656 0 3.999 3.999 0 0 1 0-5.656l107.5-107.5a3.997 3.997 0 0 1 5.656 0zM182.828 146.172a3.997 3.997 0 0 1 0 5.656l-35 35a3.997 3.997 0 0 1-5.656 0 3.997 3.997 0 0 1 0-5.656l35-35a3.997 3.997 0 0 1 5.656 0z" fill="#fff"></path>
+                            <path class="rocket" d="M207.662 104.891l-8.766-8.594c-1.547-1.719-2.063-3.953-1.031-6.016 3.093-7.219 10.656-24.234 16.843-33.172 14.094-20.797 35.063-21.484 47.438-19.078 2.062.344 3.609 1.89 3.953 3.953 2.406 12.375 1.719 33.344-19.078 47.438-9.109 6.187-26.125 13.578-33.516 16.672-1.89.859-4.297.343-5.843-1.203z" fill="#193154"></path>
+                            <path class="rocket" d="M205.573 102.843l2.089 2.048c1.546 1.546 3.953 2.062 5.843 1.203 7.391-3.094 24.407-10.485 33.516-16.672 20.797-14.094 21.484-35.063 19.078-47.438-.344-2.062-1.891-3.61-3.953-3.953-4.79-.931-10.866-1.399-17.334-.417.691.106 1.36.224 2.006.349 2.062.344 3.609 1.89 3.953 3.953 2.406 12.375 1.719 33.344-19.078 47.438-6.745 4.58-17.823 9.821-26.12 13.489z" fill="#001D40"></path>
+    
+                            <circle class="rocket" cx="245" cy="59" r="7" fill="#fff"></circle>
+    
+                            <path class="rocket" d="M213.161 59.344c-4.812 7.906-10.484 19.765-13.75 27.156h-16.328c-1.375 0-2.75-.688-3.437-2.063-.86-1.203-.86-2.921 0-4.124l9.109-14.954c2.234-3.609 6.187-6.015 10.484-6.015h13.922zm4.297 45.031c7.563-3.266 19.422-8.594 27.156-13.406v13.922a12.33 12.33 0 0 1-5.844 10.484l-14.953 9.109c-1.203.688-2.922.86-4.125 0a4.007 4.007 0 0 1-2.234-3.609v-16.5z" fill="#8991A6"></path>
+    
+                            <g opacity=".5" fill="#515F7C">
+                                <path class="rocket" d="M199.411 86.5c3.266-7.39 8.938-19.25 13.75-27.156h-13.922c-.711 0-1.414.066-2.101.192-4.774 7.851-10.387 19.575-13.659 26.964h15.932zM228.614 99.37v5.677c0 4.297-2.235 8.25-5.844 10.484l-5.312 3.236v2.108c0 1.547.86 2.922 2.235 3.609 1.203.86 2.921.688 4.125 0l14.953-9.109a12.331 12.331 0 0 0 5.843-10.484V90.969c-4.492 2.795-10.375 5.764-16 8.402z"></path>
+                            </g>
+    
+                            <path class="cloud" d="M324.739 167.758V166c0-17.188 13.867-31.25 31.25-31.25 11.524 0 21.68 6.445 26.953 15.82 2.93-2.148 6.641-3.32 10.547-3.32 10.352 0 18.75 8.398 18.75 18.75 0 2.539-.586 4.688-1.367 6.836 11.524 2.344 20.117 12.5 20.117 24.414 0 13.867-11.328 25-25 25h-71.875a28.008 28.008 0 0 1-28.125-28.125c0-12.109 7.813-22.656 18.75-26.367zM30.74 62.758V61c0-17.188 13.866-31.25 31.25-31.25 11.523 0 21.679 6.445 26.952 15.82 2.93-2.148 6.641-3.32 10.547-3.32 10.352 0 18.75 8.398 18.75 18.75 0 2.54-.586 4.688-1.367 6.836 11.524 2.344 20.117 12.5 20.117 24.414 0 13.867-11.328 25-25 25H40.114A28.008 28.008 0 0 1 11.99 89.125c0-12.11 7.813-22.656 18.75-26.367z" fill="#F0F1F3"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+ 
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row align-items-center justify-content-between  flex-column flex-md-row  mb-3">
+                    <form class="subscribe-section  rounded-pill col-md-8 col-12 p-0 ">
+                        <input type="text" placeholder="Enter your email to subscribe..." class="bg-dark w-100 p-3  rounded-pill " id="findInput">
+                        <button class="submit-btn rounded-bill text-white ">Subscribe</button>
+                    </form>
+                    <div class="col-md-3 col-md-offset-1">
+                        <div class="social-menu text-left">
+                          <a href="#" class="icon  rounded-circle bg-dark text-blue text-center"><i class="fa-brands fa-facebook-f"></i></a>
+                          <a href="#" class="icon  rounded-circle bg-dark text-blue text-center"><i class="fa-brands fa-twitter"></i></a>
+                          <a href="#" class="icon  rounded-circle  bg-dark text-blue text-center"><i class="fa-brands fa-google-plus"></i></a>
+                          <a href="#" class="icon  rounded-circle bg-dark text-blue text-center"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 fs-5 text-center text-white">
+                    <p class="copyright">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='js/bootstrap.bundle.min.js'></script>
+    <script src='js/main.js'></script>
+
+</body>
+</html>
